@@ -1,0 +1,9 @@
+steps:
+- name: "gcr.io/cloud-builders/gradle"
+  args:
+  - package
+artifacts:
+  objects:
+    location: "gs://${_BUCKET}/"
+    paths:
+    - "build/libs/${_TARGET}"
