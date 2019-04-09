@@ -1,3 +1,4 @@
+#Should use alpine
 FROM openjdk:8-jre
 ADD build/libs/cutedemo-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8010
