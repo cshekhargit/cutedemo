@@ -5,8 +5,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.cutehits.employee.Employee;
-import com.cutehits.employee.EmployeeInt;
+import com.cutehits.cutedemo.bo.Employee;
+import com.cutehits.cutedemo.bo.EmployeeInt;
 
 @SpringBootApplication
 public class CutedemoApplication implements CommandLineRunner {

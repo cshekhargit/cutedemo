@@ -1,9 +1,10 @@
-package com.cutehits.employee;
+package com.cutehits.cutedemo.bo;
 
+
+
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 @Repository
-import org.springframework.data.repository.CrudRepository;
-
 public interface EmployeeInt extends CrudRepository<Employee, Long>  {
 
 }
