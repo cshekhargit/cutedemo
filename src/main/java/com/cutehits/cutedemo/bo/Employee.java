@@ -6,6 +6,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import org.mockito.internal.invocation.SerializableMethod;
@@ -20,6 +22,7 @@ public class Employee implements Serializable {
 	   @Column(name = "id")
 	   private int id;
 	 private String name;
+	@OneToOne
 	 private Salary salary;
 	 public Employee(){
 		 
