@@ -10,7 +10,6 @@ import javax.persistence.Table;
 public class Salary {
 
 	 @Id @GeneratedValue
-	   @Column(name = "salary_id")
 	protected int id;
 	@Column(name = "emp_id")
 	protected int emp_id;
