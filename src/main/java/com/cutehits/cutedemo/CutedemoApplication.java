@@ -23,8 +23,10 @@ public class CutedemoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		employeeInt.save(new Employee(2,"abc"));
-		salaryint.save(new Salary(2,5000) );
+		Salary sal = new Salary(1,5000);
+		Employee myemployee = new Employee(1,"CS",sal);
+		employeeInt.save(myemployee);
+		//salaryint.save(new Salary(2,5000) );
 		
 	}
 

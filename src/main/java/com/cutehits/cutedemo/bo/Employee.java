@@ -24,9 +24,10 @@ public class Employee implements Serializable {
 	   @Column(name = "id")
 	   private int id;
 	 private String name;
-	 @OneToOne(cascade = CascadeType.ALL)
-	@PrimaryKeyJoinColumn
-	 private Salary salary;
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="Salary_PK")
+	private Salary salary;
+	
 	 public Salary getSalary() {
 		return salary;
 	}
@@ -42,10 +43,11 @@ public class Employee implements Serializable {
 	 }
 	 
 
-	public Employee(int id, String name) {
+	public Employee(int id, String name,Salary salary) {
 		super();
 		this.id = id;
 		this.name = name;
+		this.salary = salary;
 	}
 
 

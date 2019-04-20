@@ -10,18 +10,19 @@ import javax.persistence.Table;
 public class Salary {
 
 	 @Id @GeneratedValue
+		@Column(name = "emp_id_FK")	
 	protected int id;
-	@Column(name = "emp_id")
-	protected int emp_id;
+	
+	//protected int emp_id;
 	protected float salary;
 	
 	public Salary() {
 		
 	}
 
-public Salary(int emp_id, float salary) {
+public Salary(int id, float salary) {
 	super();
-	this.emp_id = emp_id;
+	this.id = id;
 	this.salary = salary;
 		
 	}
