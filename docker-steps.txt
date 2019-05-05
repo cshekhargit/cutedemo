@@ -5,3 +5,5 @@ docker-machine ip
 
 192.168.43.15:8888/helloworld
 192.168.99.101:8888/helloworld
+
+https://www.youtube.com/watch?v=kXhYu939_5s
