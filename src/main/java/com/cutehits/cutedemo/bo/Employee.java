@@ -9,10 +9,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
-import javax.persistence.PrimaryKeyJoinColumn;
+
 import javax.persistence.Table;
 
-import org.mockito.internal.invocation.SerializableMethod;
+
 
 //http://www.springboottutorial.com/spring-boot-crud-rest-service-with-jpa-hibernate
 //http://www.springboottutorial.com/hibernate-jpa-tutorial-with-spring-boot-starter-jp

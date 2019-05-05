@@ -1,5 +1,4 @@
 #Should use alpine
-FROM openjdk:8-jre
-ADD build/libs/cutedemo-0.0.1-SNAPSHOT.jar app.jar
-EXPOSE 8010
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+#FROM openjdk:8-jre
+FROM tomcat:8.0.20-jre8
+COPY build/libs/cutedemo-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/cutedemo.war
