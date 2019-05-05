@@ -1,10 +1,13 @@
 package com.cutehits.cutedemo;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.core.io.Resource;
+
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.cutehits.cutedemo.bo.Employee;
+import com.cutehits.cutedemo.bo.Salary;
+import com.cutehits.cutedemo.service.EmployeeService;
 
 
 
@@ -12,33 +15,35 @@ import org.springframework.web.bind.annotation.RestController;
 
 public class HelloWorldController {
 
-	//public static final Logger log = LoggerFactory.getLogger(Resource.class);
 	
-	//private static final Logger LOGGER = LogManager.getLogger(TheClass.class);
 	
-	protected static final Logger log = LoggerFactory
-			.getLogger(Resource.class);
+	private EmployeeService empservice; 
+	
+	
 	
 	@RequestMapping("/helloworld")
 	public String  HelloWorld()
 	{
-		log.info("created a new item named  identifier");
-		log.error("created a new item named  identifier");
-        log.warn("created a new item named  identifier");
+		
 		return "Hello World";
 	}
 	
-	/*@RequestMapping("/error")
-	String logger() {
+	
+	
+	@RequestMapping("/addemp")
+	public Employee addEmp()
+	{
+		Salary sal = new Salary(1,5000);
+		Employee myemployee = new Employee(1,"CS",sal);
+		try{
+			Employee myemployee1 =empservice.addEmp(myemployee);	
+		}
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 		
-		log.info("created a new item named  identifier");
-		log.error("created a new item named  identifier");
-        log.warn("created a new item named  identifier");
-
-        System.out.println("Test");
-       
-        return "Logger Called.";
-
-    }*/
+		return myemployee;
+	}
+	
 
 }
