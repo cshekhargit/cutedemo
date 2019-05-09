@@ -1,5 +1,5 @@
-docker build -t helloworld .
-docker run -it --rm -p 8888:8080 helloworld 
+docker build -t cutedemo .
+docker run -it --rm -p 8888:8080 cutedemo 
 
 docker-machine ip
 
@@ -7,3 +7,11 @@ docker-machine ip
 192.168.99.101:8888/helloworld
 
 https://www.youtube.com/watch?v=kXhYu939_5s
+
+docker run --name spring-mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=db_example -e MYSQL_USER=cs -e MYSQL_PASSWORD=password -d mysql
+
+docker build . -t spring-app
+
+docker run -p 8080:8080 --name spring-app --link spring-mysql:mysql -d spring-app
+
+http://192.168.99.101:8080/helloworld
